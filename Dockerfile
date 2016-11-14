@@ -7,5 +7,3 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN /etc/init.d/postgresql start \
   && sudo -u postgres sh -c 'createuser root & createdb docker'
-ADD . /code
-WORKDIR /code
